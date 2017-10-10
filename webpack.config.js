@@ -10,8 +10,6 @@ let libraryName = 'ExampleModule';
 
 let plugins = [], outputFile;
 
-plugins.push(new ExtractTextPlugin(libraryName + ".css"));
-
 if (env === 'production') {
   plugins.push(new UglifyJsPlugin({ minimize: true }));
   outputFile = libraryName + '.min.js';
@@ -37,8 +35,16 @@ const config = {
         exclude: /(node_modules|bower_components)/
       },
       {
-        test: /\.css/,
-        loader: ExtractTextPlugin.extract("css-loader")
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }
+        ]
       }
     ]
   },

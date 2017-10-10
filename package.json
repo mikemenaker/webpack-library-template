@@ -1,6 +1,6 @@
 {
   "name": "webpack-library-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library template with es6 and css bundled by webpack",
   "main": "dist/ExampleModule.js",
   "scripts": {
