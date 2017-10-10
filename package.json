@@ -1,8 +1,8 @@
 {
   "name": "webpack-library-template",
-  "version": "0.3.3",
-  "description": "Produce universal library with webpack and es6",
-  "main": "dist/CreateParagraph.js",
+  "version": "1.0.0",
+  "description": "Library template with es6 and css bundled by webpack",
+  "main": "dist/ExampleModule.js",
   "scripts": {
     "build": "webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",

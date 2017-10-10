@@ -1,2 +1,2 @@
-import ExampleModule from './module.js';
-export { ExampleModule };
+import createParagraphElement from './module.js';
+export { createParagraphElement };

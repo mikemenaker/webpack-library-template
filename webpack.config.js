@@ -6,7 +6,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 const env = require('yargs').argv.env; // use --env with webpack 2
 
-let libraryName = 'CreateParagraph';
+let libraryName = 'ExampleModule';
 
 let plugins = [], outputFile;
 
