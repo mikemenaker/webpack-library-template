@@ -12,7 +12,7 @@ let plugins = [], outputFile;
 
 plugins.push(new ExtractTextPlugin(libraryName + ".css"));
 
-if (env === 'build') {
+if (env === 'production') {
   plugins.push(new UglifyJsPlugin({ minimize: true }));
   outputFile = libraryName + '.min.js';
 } else {

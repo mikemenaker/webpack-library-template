@@ -4,10 +4,9 @@
   "description": "Library template with es6 and css bundled by webpack",
   "main": "dist/ExampleModule.js",
   "scripts": {
-    "build": "webpack --env build",
-    "dev": "webpack --progress --colors --watch --env dev",
-    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
+    "build": "webpack --env production",
+    "dev": "webpack --progress --colors --env dev",
+    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js"    
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
