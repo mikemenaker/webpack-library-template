@@ -9,4 +9,7 @@
 
 
 Example of consuming a library from outside Node:
-https://jsfiddle.net/mikemenaker/yu82j4an/7/
+
+https://jsfiddle.net/mikemenaker/84aryz45/
+
+
