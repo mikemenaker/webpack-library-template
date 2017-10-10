@@ -2,12 +2,15 @@
 
 const webpack = require('webpack');
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 const env = require('yargs').argv.env; // use --env with webpack 2
 
 let libraryName = 'CreateParagraph';
 
 let plugins = [], outputFile;
+
+plugins.push(new ExtractTextPlugin(libraryName + ".css"));
 
 if (env === 'build') {
   plugins.push(new UglifyJsPlugin({ minimize: true }));
@@ -32,6 +35,10 @@ const config = {
         test: /(\.jsx|\.js)$/,
         loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.css/,
+        loader: ExtractTextPlugin.extract("css-loader")
       }
     ]
   },
