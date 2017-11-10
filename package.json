@@ -38,7 +38,7 @@
     "umd",
     "commonjs"
   ],
-  "author": "Krasimir Tsonev",
+  "author": "Mike Menaker",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mikemenaker/webpack-library-template.git/issues"
