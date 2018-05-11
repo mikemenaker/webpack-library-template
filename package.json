@@ -5,14 +5,15 @@
   "main": "dist/ExampleModule.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode development --output-path ../webmap/webapp/node_modules/timeline-map/dist/ --watch",
-    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js"    
+    "dev": "webpack --mode development --watch",
+    "test": "mocha -r jsdom-global/register  --compilers js:@babel/register --colors ./test/*.spec.js",
     "lint": "eslint ./src --ext .js"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",
     "@babel/core": "^7.0.0-beta.42",
     "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/register": "^7.0.0-beta.46",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^8.0.0-beta.2",
     "chai": "3.5.0",
@@ -20,6 +21,8 @@
     "eslint": "3.19.0",
     "eslint-loader": "1.7.1",
     "extract-text-webpack-plugin": "^3.0.1",
+    "jsdom": "^11.10.0",
+    "jsdom-global": "^3.0.2",
     "mocha": "3.3.0",
     "style-loader": "^0.19.1",
     "webpack": "^4.6.0",
